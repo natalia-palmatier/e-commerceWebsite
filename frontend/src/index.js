@@ -2,12 +2,15 @@ import HomeScreen from './srceens/HomeScreen';
 import ProductScreen from './srceens/ProductScreen';
 import { parseRequestUrl } from './utils';
 import Error404Screen from './srceens/Error404Screen';
+import CartScreen from './srceens/CartScreen.JS';
 
 const routes = {
   '/': HomeScreen,
   '/product/:id': ProductScreen,
+  '/cart/:id': CartScreen,
+  '/cart': CartScreen,
 };
-const router = async () => {
+const router = async () => { 
   const request = parseRequestUrl();
   const parseUrl =
     (request.resource ? `/${request.resource}` : '/') +
@@ -21,4 +24,3 @@ const router = async () => {
 };
 window.addEventListener('load', router);
 window.addEventListener('hashchange', router);
-
