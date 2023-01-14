@@ -2,6 +2,7 @@ import HomeScreen from './srceens/HomeScreen';
 import ProductScreen from './srceens/ProductScreen';
 import { parseRequestUrl } from './utils';
 import Error404Screen from './srceens/Error404Screen';
+import CartScreen from './srceens/CartScreen';
 import SigninScreen from './srceens/SigninScreen';
 
 const routes = {
@@ -11,7 +12,7 @@ const routes = {
   '/cart': CartScreen,
   '/signin': SigninScreen,
 };
-const router = async () => { 
+const router = async () => {
   const request = parseRequestUrl();
   const parseUrl =
     (request.resource ? `/${request.resource}` : '/') +

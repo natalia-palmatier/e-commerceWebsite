@@ -6,7 +6,6 @@ import data from './data';
 import config from './config';
 import userRouter from './routers/userRouter';
 
-
 mongoose
   .connect(config.MONGODB_URL, {
     useNewUrlParser: true,
@@ -19,7 +18,6 @@ mongoose
   .catch((error) => {
     console.log(error.reason);
   });
-
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
