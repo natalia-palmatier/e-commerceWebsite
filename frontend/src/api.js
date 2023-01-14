@@ -14,6 +14,7 @@ export const getProduct = async (id) => {
         if (response.statusText !== 'OK') {
             throw new Error(response.data.message);
         }
+        // tewzsst
         return response.data;
     } catch (err) {
         console.log(err);
